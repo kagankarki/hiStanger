@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Warm, calm background gradient — Apple-like softness */
+.app-bg {
+  background:
+    radial-gradient(1200px 600px at 50% -10%, #ffffff 0%, rgba(255, 255, 255, 0) 60%),
+    linear-gradient(180deg, #fbf9f6 0%, #f3ede3 100%);
+}
+
+/* Frosted card */
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.02),
+    0 12px 40px rgba(80, 60, 44, 0.1);
+}
+
+/* Native-feeling focus ring */
+.focus-ring:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(138, 109, 82, 0.25);
+}
+
+/* Hide scrollbar but keep scrolling (time-slot picker) */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---- Leaflet: match the calm, Apple-like palette ---- */
+.leaflet-container {
+  font-family: inherit;
+  background: #eef1f3;
+}
+.leaflet-bar {
+  border: none !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(80, 60, 44, 0.16) !important;
+}
+.leaflet-bar a {
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 32px !important;
+  color: #503c2c !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-bottom: 1px solid rgba(80, 60, 44, 0.08) !important;
+  font-size: 18px;
+}
+.leaflet-bar a:hover {
+  background: #f3ede3 !important;
+}
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.7) !important;
+  color: #8a6d52 !important;
+  font-size: 10px !important;
+  border-radius: 8px 0 0 0;
+  padding: 1px 6px !important;
+}
+.leaflet-control-attribution a {
+  color: #6f5540 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

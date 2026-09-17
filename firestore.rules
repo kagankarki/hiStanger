@@ -1,0 +1,27 @@
+rules_version = '2';
+
+// Firebase Console > Firestore Database > Rules bölümüne yapıştırıp "Publish" yap.
+// Ziyaretçiler yalnızca yeni bir plan OLUŞTURABİLİR; hiçbir kaydı okuyamaz,
+// değiştiremez veya silemez. Böylece herkes kaydını gönderebilir ama
+// gelen planları yalnızca sen (Firebase Console'dan) görürsün.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /coffeeDates/{doc} {
+      allow read, update, delete: if false;
+
+      allow create: if
+        request.resource.data.keys().hasOnly(
+          ['date', 'time', 'place', 'lat', 'lng', 'mapsUrl', 'createdAt']
+        )
+        && request.resource.data.date is string
+        && request.resource.data.date.size() <= 20
+        && request.resource.data.time is string
+        && request.resource.data.time.size() <= 10
+        && request.resource.data.place is string
+        && request.resource.data.place.size() > 0
+        && request.resource.data.place.size() <= 200
+        && request.resource.data.createdAt is string
+        && request.resource.data.createdAt.size() <= 40;
+    }
+  }
+}
