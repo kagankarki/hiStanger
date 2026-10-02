@@ -4,6 +4,19 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Merhaba Ece Nehir",
   description: "Sana küçük bir sorum var.",
+  // WhatsApp / Instagram / Facebook link önizlemesi (Open Graph)
+  openGraph: {
+    title: "Merhaba Ece Nehir",
+    description: "Sana küçük bir sorum var.",
+    type: "website",
+    locale: "tr_TR",
+    siteName: "Merhaba Ece Nehir",
+  },
+  twitter: {
+    card: "summary",
+    title: "Merhaba Ece Nehir",
+    description: "Sana küçük bir sorum var.",
+  },
 };
 
 export const viewport: Viewport = {
