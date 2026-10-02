@@ -1,6 +1,6 @@
-# Merhaba Defne ☕️
+# Merhaba Ece Nehir ☕️
 
-Defne için sade, Apple tarzı, animasyonlu bir davet sayfası.
+Ece Nehir için sade, Apple tarzı, animasyonlu bir davet sayfası.
 Akış: karşılama → soru (Evet / kaçan "Hayır" butonu) → tarih–saat–**harita ile mekan** seçimi → teşekkür.
 
 Teknolojiler: **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, **Framer Motion**, **Leaflet + OpenStreetMap** (harita), **Firebase (Firestore)**.
@@ -49,7 +49,7 @@ app/
   page.tsx          # adımları yöneten durum makinesi
   globals.css       # Tailwind + cam efekti / arkaplan
 components/
-  Greeting.tsx      # "Merhaba Defne…" karşılama dizisi
+  Greeting.tsx      # "Merhaba Ece Nehir…" karşılama dizisi
   Question.tsx      # kahve sorusu + kaçan "Hayır" (mobil dahil)
   Scheduler.tsx     # tarih / saat / harita ile mekan
   MapPicker.tsx     # Leaflet harita + OpenStreetMap arama

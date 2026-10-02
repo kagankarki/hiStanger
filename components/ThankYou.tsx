@@ -52,7 +52,7 @@ export default function ThankYou({ plan }: { plan: DatePlan }) {
         transition={{ delay: 0.15, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className="text-4xl font-semibold tracking-tight text-espresso-800 sm:text-5xl"
       >
-        Teşekkürler Defne
+        Teşekkürler Ece Nehir
       </motion.h2>
 
       <motion.p

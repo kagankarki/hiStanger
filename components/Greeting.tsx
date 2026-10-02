@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import CoffeeMark from "./CoffeeMark";
 
 const LINES = [
-  "Merhaba Defne",
+  "Merhaba Ece Nehir",
   "Çok güzelsin",
   "Aslında küçük bir sorum var…",
 ];
